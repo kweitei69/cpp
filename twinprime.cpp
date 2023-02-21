@@ -19,12 +19,15 @@ int twinprime(int n1, int n2){
 }
 
 
+
 int main()
 {
     int arr[15]={3,101,96,47,41,7,65,9,13,5,79,45,30,11,43};
-    for (int i=0; i<=15; i++){
-        if (twinprime(arr[i]) == true ){
-            cout << "(" << arr[i] << ")" << ",";
+    for (int i=0; i<15; i++){
+        for (int k = i+1; k<15; k++){
+            if (twinprime(arr[i], arr[k]) == true ){
+                cout << "(" << arr[i] << "," << arr[k] << ")" ;
+            }
         }   
     }
     return 0;
